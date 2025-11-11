@@ -153,10 +153,17 @@ Environment variables are in `.env` at the repository root:
 - Build output: `build`
 - Node version: Latest LTS
 - **Important:** Project files are at the repository root (not in a subdirectory)
+- **Required:** `_redirects` file in `public/` directory for SPA routing
 
 **Environment Variables in Cloudflare Pages:**
 - `REACT_APP_SUPABASE_URL`
 - `REACT_APP_SUPABASE_ANON_KEY`
+
+**Important Files:**
+- `public/_redirects` - Required for React Router to work on static hosting
+  ```
+  /*    /index.html   200
+  ```
 
 ## Development Notes
 
