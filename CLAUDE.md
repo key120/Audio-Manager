@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **React-based audio file management system** that allows users to upload, manage, and play audio files. The application uses **Supabase** as the backend service for authentication, database operations, and file storage. The project is located in the `audio-manager/` subdirectory and is a standard **Create React App** application.
+This is a **React-based audio file management system** that allows users to upload, manage, and play audio files. The application uses **Supabase** as the backend service for authentication, database operations, and file storage. This is a standard **Create React App** application located at the repository root.
 
-**Status:** ✅ Completed - All core features implemented and deployed to Cloudflare Pages
+**Status:** ✅ Completed - All core features implemented
 
 ## Development Commands
 
 ### Core Commands
-All commands should be run from the `audio-manager/` directory:
+All commands should be run from the repository root:
 
 ```bash
 # Start development server
@@ -36,8 +36,8 @@ npm run eject
 
 ### Project Structure
 ```
-audio-manager/
-├── src/
+/
+├── src/                     # Source code
 │   ├── components/          # Reusable UI components
 │   │   ├── AudioPlayer.js   # Audio playback controls
 │   │   ├── FileUpload.js    # Drag-and-drop upload component
@@ -53,6 +53,9 @@ audio-manager/
 │   │   └── DevTest.js       # Development testing page
 │   └── utils/               # Utility functions
 │       └── supabase.js      # Supabase client configuration
+├── public/                  # Static assets
+├── package.json             # Dependencies and scripts
+└── .env                     # Environment variables
 ```
 
 ### High-Level Architecture
@@ -127,7 +130,7 @@ audio_files (
 
 ## Environment Configuration
 
-Environment variables are in `audio-manager/.env`:
+Environment variables are in `.env` at the repository root:
 - `REACT_APP_SUPABASE_URL`: Supabase project URL
 - `REACT_APP_SUPABASE_ANON_KEY`: Supabase anonymous key (safe for client-side)
 
@@ -149,6 +152,7 @@ Environment variables are in `audio-manager/.env`:
 - Build command: `npm run build`
 - Build output: `build`
 - Node version: Latest LTS
+- **Important:** Project files are at the repository root (not in a subdirectory)
 
 **Environment Variables in Cloudflare Pages:**
 - `REACT_APP_SUPABASE_URL`
